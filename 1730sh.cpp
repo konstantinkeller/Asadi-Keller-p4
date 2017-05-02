@@ -426,7 +426,7 @@ int run (const char * prog, int argc, char * const args[], int fdin /*=0*/, int 
 
         // execute
         if (execvp(prog, args) < 0) {
-            perror("exec");
+            perror(string("1730sh: " + string(prog)).c_str());
             exit(EXIT_FAILURE);
         }
     }
