@@ -343,7 +343,7 @@ string prompt() {
 
     prompt += "1730sh:";
 
-    string pwd = getenv("PWD");
+    string pwd = getcwd(NULL, 0);
     string home = getenv("HOME");
 
     if (pwd.find(home, 0) != string::npos)
